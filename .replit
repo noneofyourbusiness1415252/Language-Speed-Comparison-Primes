@@ -1,1 +1,1 @@
-run = "python main.py 2> /tmp/log"
+run = "python main.py 2> /dev/null"

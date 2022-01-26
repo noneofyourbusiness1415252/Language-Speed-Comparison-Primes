@@ -2,8 +2,8 @@ from timeit import timeit
 i = 1
 faster = ""
 while True:
-	pypy = timeit(f"check_output(['pypy3', 'SieveofAtkin.py', '{int(i)}'])", setup="from subprocess import check_output", number=9)
-	cpython = timeit(f"check_output(['python3.10', 'SieveofAtkin.py', '{int(i)}'])", setup="from subprocess import check_output", number=9)
+	pypy = timeit(f"check_output(['pypy3', '-c', '[False] * {i}'])", setup="from subprocess import check_output", number=3)
+	cpython = timeit(f"check_output(['python3.10', '-c', '[False] * {i}'])", setup="from subprocess import check_output", number=3)
 	if pypy < cpython:
 		if faster != "pypy":
 			print("\033[1;38;2;185;242;255mPyPy takes the lead!\033[0m")

@@ -1,12 +1,11 @@
 #include <cmath>
 #include <string>
-#include <vector>
 #include <iostream>
 using namespace std;
 int main(int argc, char **argv) {
 	ios_base::sync_with_stdio(false);
 	unsigned limit = stoi(argv[1]), isqrt = sqrt(limit);
-	vector<bool> sieve(limit + 1);
+	bool* sieve = new bool[limit + 1];
 	for (unsigned i = 1; i <= isqrt; i++) {
 		unsigned isquare = i * i, triple_isquare = isquare * 3;
 		for (unsigned j = 1; j <= isqrt; j++) {

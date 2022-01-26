@@ -1,8 +1,7 @@
-import kotlin.math.sqrt
 fun main(args: Array<String>) {
 	val limit = args[0].toInt()
 	var sieve = BooleanArray(limit + 1)
-	val isqrt = sqrt(limit.toFloat()).toInt()
+	val isqrt = kotlin.math.sqrt(limit.toFloat()).toInt()
 	val uptoisqrt = 1..isqrt
 	for (i in uptoisqrt) {
 		val isquare = i * i
@@ -10,7 +9,7 @@ fun main(args: Array<String>) {
 		for (j in uptoisqrt) {
 			val jsquare = j * j
 			var n = 4 * isquare + jsquare
-			if (n <= limit && n % 12 in arrayOf(1, 5))
+			if (n <= limit && n % 12 in setOf(1, 5))
 				sieve[n] =  !sieve[n]
 			n = triple_isquare + jsquare
 			if (n <= limit && n % 12 == 7)

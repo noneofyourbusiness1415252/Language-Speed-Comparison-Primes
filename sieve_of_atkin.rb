@@ -2,7 +2,7 @@
 
 limit = ARGV[0].to_i
 sieve = [false] * (limit + 1)
-sqrt = (limit**0.5).to_i
+sqrt = Integer.sqrt(limit)
 uptosqrt = 1..sqrt
 uptosqrt.each do |i|
 	isquare = i**2

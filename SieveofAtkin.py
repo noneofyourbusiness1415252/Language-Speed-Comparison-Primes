@@ -1,6 +1,7 @@
 from sys import argv
+from array import array
 limit = int(argv[1])
-sieve = [False] * (limit + 1)
+sieve = array("B", [False]) * (limit + 1)
 sqrt = int(limit ** 0.5)
 uptosqrt = range(1, sqrt + 1)
 for i in uptosqrt:
@@ -9,7 +10,7 @@ for i in uptosqrt:
 	for j in uptosqrt:
 		jsquare = j ** 2
 		n = 4 * isquare + jsquare
-		if n <= limit and n % 12 in [1, 5]:
+		if n <= limit and n % 12 in {1, 5}:
 			sieve[n] = not sieve[n]
 		n = tsquare + jsquare
 		if n <= limit and n % 12 == 7:

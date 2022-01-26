@@ -1,6 +1,5 @@
 { pkgs }: {
 	deps = [
-		pkgs.pypy3
 		pkgs.python310
 		pkgs.rustc
 		pkgs.rustfmt

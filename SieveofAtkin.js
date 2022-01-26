@@ -1,5 +1,5 @@
 limit = parseInt(process.argv[2])
-sieve = Array(limit + 1)
+sieve = new Uint8Array(limit + 1)
 sqrt = parseInt(limit ** 0.5)
 for (i = 1; i <= sqrt; i++) {
 	isquare = i ** 2

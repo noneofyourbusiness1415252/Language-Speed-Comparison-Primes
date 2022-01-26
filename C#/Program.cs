@@ -6,8 +6,8 @@ class Program {
 		for (uint i = 1; i <= isqrt; i++) {
 			uint isquare = i * i, triple_isquare = isquare * 3;
 			for (uint j = 1; j <= isqrt; j++) {
-				uint jsquare = j * j, n = 4 * isquare + jsquare, m12 = n % 12;
-				if (n <= limit && (m12 == 1 || m12 == 5))
+				uint jsquare = j * j, n = 4 * isquare + jsquare;
+				if (n <= limit && n % 12 is 1 or 5)
 					sieve[n] = !sieve[n];
 				if ((n = triple_isquare + jsquare) <= limit && n % 12 == 7)
 					sieve[n] = !sieve[n];
