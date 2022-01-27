@@ -28,6 +28,7 @@ Total: 25
 | CPython  | `python`                                                      | `3.10.0rc1` |
 | Go       | `go build`                                                    | `1.16.7`    |
 | C        | `gcc -Ofast`                                                  | `10.3.0`    |
+| C++      | `g++ -Ofast`                                                  | `10.3.0`    |
 | Java     | `javac`, `java`                                               | `16.0.1`    |
 | C#       | `dotnet publish -c Release -p:PublishSingleFile -r linux-x64` | `5.0.202`   |
 | NodeJS   | `node`                                                        | `v16.7.0`   |
