@@ -4,7 +4,7 @@ environ["DOTNET_SYSTEM_GLOBALIZATION_INVARIANT"], reset, diamond, langs = (
 	"true", 
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
-	["C", "C++", "Rust", "Go", "NodeJS", "C#", "Python", "Java", "Kotlin"],
+	["C", "C++", "Rust", "Go", "NodeJS", "C#", "Ruby", "Python", "Java", "Kotlin"],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -27,7 +27,7 @@ while True:
 	else:
 		break
 while True:
-	print(f"Times with {diamond}{limit}{reset} numbers:")
+	print(f"\nTimes with {diamond}{limit}{reset} numbers:")
 	times = {}
 	for i in langs:
 		match i:
