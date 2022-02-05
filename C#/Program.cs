@@ -1,31 +1,16 @@
 using System;
-class Program {
+class primes {
 	static void Main(string[] args) {
-		uint limit = uint.Parse(args[0]), isqrt = (uint)Math.Sqrt((double)limit);
-		bool[] sieve = new bool[limit + 1];
-		for (uint i = 1; i <= isqrt; i++) {
-			uint isquare = i * i, triple_isquare = isquare * 3;
-			for (uint j = 1; j <= isqrt; j++) {
-				uint jsquare = j * j, n = 4 * isquare + jsquare;
-				if (n <= limit && n % 12 is 1 or 5)
-					sieve[n] = !sieve[n];
-				if ((n = triple_isquare + jsquare) <= limit && n % 12 == 7)
-					sieve[n] = !sieve[n];
-				if (i > j && (n = triple_isquare - jsquare) <= limit && n % 12 == 11)
-					sieve[n] = !sieve[n];
-			}
-		}
-		for (uint i = 5; i < isqrt; i++)
-			if (sieve[i]) {
-				uint isquare = i * i;
-				for (uint j = isquare; j <= limit; j += isquare)
-					sieve[j] = false;
-			}
-		Console.Write("2, 3");
-		ushort total = 2;
-		for (uint i = 5; i <= limit; i++)
-			if (sieve[i]) {
-				Console.Write(", " + i);
+		Console.Write(2);
+		uint limit = uint.Parse(args[0]), half = limit / 2,
+			 isqrt = (uint)Math.Sqrt(limit), total = 1;
+		bool[] sieve = new bool[half];
+		for (uint i = 3; i <= isqrt; i += 2)
+			if (!sieve[i / 2])
+				for (uint j = i * i / 2; j < half; j += i) sieve[j] = true;
+		for (uint i = 1; i < half; i++)
+			if (!sieve[i]) {
+				Console.Write(", " + (2 * i + 1));
 				total++;
 			}
 		Console.WriteLine("\nTotal: " + total);

@@ -10,6 +10,7 @@
 		pkgs.go
 		pkgs.clang-tools
 		pkgs.kotlin
+		pkgs.ktlint
 		pkgs.nodePackages.prettier
 	];
 }
