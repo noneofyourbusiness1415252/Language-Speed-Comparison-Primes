@@ -1,0 +1,143 @@
+Enter a number for the first test 
+Enter a pattern to increase the numbers tested each time, e.g. +5 (add 5 each time), *4 (multiply by 4 each time), **2 (square each time) 
+[31mError: Please enter a valid pattern: Times with 100 numbers:
+C: 0.006
+C++: 0.003
+Rust: 0.002
+Go: 0.046
+NodeJS: 0.165
+C#: 0.151
+Ruby: 0.283
+Python: 0.302
+Java: 0.437
+Kotlin: 1.03
+Multipliers, relative to Rust:
+Rust: 1.0
+C++: 1.55
+C: 2.95
+Go: 24.4
+C#: 79.12
+NodeJS: 86.39
+Ruby: 148.34
+Python: 158.77
+Java: 229.28
+Kotlin: 540.72
+Times with 1000 numbers:
+Rust: 0.004
+C++: 0.003
+C: 0.003
+Go: 0.031
+C#: 0.144
+NodeJS: 0.143
+Ruby: 0.28
+Python: 0.388
+Java: 0.484
+Kotlin: 1.112
+Multipliers, relative to C++:
+C++: 1.0
+C: 1.03
+Rust: 1.48
+Go: 12.34
+NodeJS: 56.37
+C#: 56.79
+Ruby: 110.08
+Python: 152.38
+Java: 190.16
+Kotlin: 437.24
+Times with 10000 numbers:
+C++: 0.008
+C: 0.007
+Rust: 0.008
+Go: 0.084
+NodeJS: 0.143
+C#: 0.178
+Ruby: 0.322
+Python: 0.32
+Java: 1.122
+Kotlin: 1.157
+Multipliers, relative to C:
+C: 1.0
+Rust: 1.12
+C++: 1.17
+Go: 12.27
+NodeJS: 20.85
+C#: 25.83
+Python: 46.51
+Ruby: 46.86
+Java: 163.11
+Kotlin: 168.1
+Times with 100000 numbers:
+C: 0.008
+Rust: 0.007
+C++: 0.007
+Go: 0.413
+NodeJS: 0.282
+C#: 0.262
+Python: 0.453
+Ruby: 0.451
+Java: 1.839
+Kotlin: 1.411
+Multipliers, relative to C++:
+C++: 1.0
+Rust: 1.11
+C: 1.18
+C#: 40.16
+NodeJS: 43.29
+Go: 63.41
+Ruby: 69.18
+Python: 69.44
+Kotlin: 216.42
+Java: 282.02
+Times with 1000000 numbers:
+C++: 0.065
+Rust: 0.024
+C: 0.066
+C#: 0.401
+NodeJS: 0.624
+Go: 6.611
+Ruby: 1.863
+Python: 1.724
+Kotlin: 2.016
+Java: 3.482
+Multipliers, relative to Rust:
+Rust: 1.0
+C++: 2.73
+C: 2.78
+C#: 16.94
+NodeJS: 26.4
+Python: 72.94
+Ruby: 78.81
+Kotlin: 85.29
+Java: 147.3
+Go: 279.66
+Times with 10000000 numbers:
+Rust: 0.334
+C++: 0.24
+C: 0.363
+C#: 1.894
+NodeJS: 3.373
+Python: 13.682
+Ruby: 20.979
+Kotlin: 4.129
+Java: 11.133
+Go: 71.138
+Multipliers, relative to C++:
+C++: 1.0
+Rust: 1.39
+C: 1.51
+C#: 7.88
+NodeJS: 14.04
+Kotlin: 17.18
+Java: 46.32
+Python: 56.93
+Ruby: 87.29
+Go: 296.0
+Times with 100000000 numbers:
+C++: 3.84
+Rust: 4.588
+C: 3.159
+C#: 15.057
+NodeJS: 27.86
+Kotlin: 17.284
+Java: 43.915
+Python: 131.227

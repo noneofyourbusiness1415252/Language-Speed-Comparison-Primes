@@ -1,6 +1,5 @@
 from timeit import timeit
 from os import environ
-
 environ["DOTNET_SYSTEM_GLOBALIZATION_INVARIANT"], reset, diamond, langs = (
 	"true",
 	"\033[0m",
