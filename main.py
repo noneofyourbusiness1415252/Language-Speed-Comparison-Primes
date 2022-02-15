@@ -1,10 +1,10 @@
 from timeit import timeit
 from os import environ
-environ["DOTNET_SYSTEM_GLOBALIZATION_INVARIANT"], reset, diamond, langs = (
-	"true",
+reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
-	["C", "C++", "Rust", "Go", "NodeJS", "C#", "Ruby", "Python", "Java", "Kotlin"],
+	"\033[31m",
+	["C", "C++", "Rust", "Go", "C#", "Kotlin", "NodeJS", "Java", "Python", "Ruby"],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -24,7 +24,7 @@ while True:
 		pattern = input()
 		eval(f"{limit} {pattern}")
 	except:
-		print("\033[31mError: Please enter a valid pattern: ", end=diamond)
+		print(f"{red}Error: Please enter a valid pattern: ", end=diamond)
 	else:
 		break
 while True:
@@ -34,19 +34,23 @@ while True:
 		match i:
 			case "Python":
 				args = "'python', 'primes.py'"
-			case "Java" | "Kotlin":
-				args = f"'{i.lower()}', '-cp', '{i}', 'primes'"
+			case "Java":
+				args = f"'java', '-cp', 'Java', 'primes'"
 			case "NodeJS":
 				args = "'node', 'primes.js'"
 			case "Ruby":
 				args = "'ruby', 'primes.rb'"
 			case _:
 				args = f"'./{i}/primes'"
-		times[i] = timeit(
-			f"check_output([{args}, '{limit}'])",
-			"from subprocess import check_output",
-			number=1,
-		)
+		try:
+			times[i] = timeit(
+				f"run([{args}, '{limit}'], stdout=DEVNULL, stderr=DEVNULL, check=True)",
+				"from subprocess import run, DEVNULL",
+				number=1,
+			)
+		except Exception as e:
+			print(f"{i}: {red}{e}{reset}")
+			continue
 		print(f"{i}: {diamond}{round(times[i], 3)}{reset}")
 	lnames = times.keys()
 	fastest = min(lnames, key=times.get)

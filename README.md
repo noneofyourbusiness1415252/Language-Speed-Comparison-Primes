@@ -10,10 +10,9 @@ You may want to see the output. Simply type these commands for each language, fo
 | Python   | `python primes.py`         |
 | NodeJS   | `node primes.js`           |
 | Java     | `java -cp Java primes`     |
-| Kotlin   | `kotlin -cp Kotlin primes` |
 | Others   | `<language>/SieveofAtkin`  |
 
-Example: `ruby HCN.rb 1000` and `Kotlin/HCN 1000` both output:
+Example: `ruby primes.rb 1000`, `Kotlin/primes 1000` both output:
 
 ```
 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
@@ -22,15 +21,5 @@ Total: 25
 
 # Versions of compilers and interpreters
 
-| Language | Command                                                       | Version     |
-| -------- | ------------------------------------------------------------- | ----------- |
-| Rust     | `rustc -C opt-level=3`                                        | `1.53.0`    |
-| Ruby     | `ruby`                                                        | `3.02p107`  |
-| Python   | `python`                                                      | `3.10.0rc1` |
-| Go       | `go build`                                                    | `1.16.7`    |
-| C        | `gcc -Ofast`                                                  | `10.3.0`    |
-| C++      | `g++ -Ofast`                                                  | `10.3.0`    |
-| Java     | `javac`, `java`                                               | `16.0.1`    |
-| C#       | `dotnet publish -c Release -p:PublishSingleFile -r linux-x64` | `5.0.202`   |
-| NodeJS   | `node`                                                        | `v16.7.0`   |
-| Kotlin   | `kotlinc`, `kotlin`                                           | `1.6.10`    |
+Go to the file 'replit.nix', and see the packages listed there. To see the version of a language, go to [NixOS Search](https://search.nixos.org/packages?channel=unstable) and type in the package name. For example, for C#, there is a line in replit.nix which says `pkgs.dotnet-sdk`. Search up `dotnet-sdk` on the nix website, and you will see the version used. I will try to update the language versions as soon as new ones comes out, but please notify me if I fail to do so.  
+![C# version](image.png)  

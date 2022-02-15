@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "AD7K1ojbRFNYX7iUvTN6g18YOAIVfWPcuo6daCcb+/et5PkjTosiK0LFlJv7eRyfWiarwSySBxi5z2vx9k4B0g==",
+  "success": true,
+  "projectFilePath": "/home/runner/Language-Speed-Comparison-Primes/C#/primes.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.netcore.app.host.linux-x64/5.0.12/microsoft.netcore.app.host.linux-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

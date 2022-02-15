@@ -1,1 +1,5 @@
-run = "python main.py 2> /dev/null"
+run = "python main.py"
+[nix]
+channel = "unstable"
+[env]
+DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = "true"
