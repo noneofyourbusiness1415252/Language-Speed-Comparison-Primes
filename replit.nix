@@ -14,5 +14,6 @@
 		pkgs.jdk # Java
 		pkgs.ktlint
 		pkgs.nodePackages.prettier
+		pkgs.powershell
 	];
 }

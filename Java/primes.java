@@ -10,7 +10,7 @@ interface primes {
 				for (int j = i * i / 2; j < half; j += i) sieve[j] = true;
 		for (int i = 1; i < half; i++)
 			if (!sieve[i]) {
-				System.out.printf(", %d", 2 * i + 1);
+				System.out.print(", " + Integer.toUnsignedString(2 * i + 1));
 				total++;
 			}
 		System.out.printf("\nTotal: %d\n", total);
