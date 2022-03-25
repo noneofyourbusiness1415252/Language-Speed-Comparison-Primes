@@ -4,13 +4,13 @@ This test compares the speed of Rust, C, Node.JS, C#, Python, Java, Go, Kotlin a
 
 You may want to see the output. Simply type these commands for each language, followed by the number you want to check up to:
 
-| Language | Command                    |
-| -------- | -------------------------- |
-| Ruby     | `ruby primes.rb`           |
-| Python   | `python primes.py`         |
-| NodeJS   | `node primes.js`           |
-| Java     | `java -cp Java primes`     |
-| Others   | `<language>/SieveofAtkin`  |
+| Language | Command                   |
+| -------- | ------------------------- |
+| Ruby     | `ruby primes.rb`          |
+| Python   | `python primes.py`        |
+| NodeJS   | `node primes.js`          |
+| Java     | `java -cp Java primes`    |
+| Others   | `<language>/SieveofAtkin` |
 
 Example: `ruby primes.rb 1000`, `Kotlin/primes 1000` both output:
 
@@ -21,5 +21,5 @@ Total: 25
 
 # Versions of compilers and interpreters
 
-Go to the file 'replit.nix', and see the packages listed there. To see the version of a language, go to [NixOS Search](https://search.nixos.org/packages?channel=unstable) and type in the package name. For example, for C#, there is a line in replit.nix which says `pkgs.dotnet-sdk`. Search up `dotnet-sdk` on the nix website, and you will see the version used. I will try to update the language versions as soon as new ones comes out, but please notify me if I fail to do so.  
-![C# version](image.png)  
+Go to the file `replit.nix`, and see the packages listed there. To see the version of a language, go to [NixOS Search](https://search.nixos.org/packages?channel=unstable) and type in the package name. For example, for C#, there is a line in replit.nix which says `pkgs.dotnet-sdk`. Search up `dotnet-sdk` on the nix website, and you will see the version used. I will try to update the language versions as soon as new ones comes out, but please notify me if I fail to do so.  
+![C# version](image.png)

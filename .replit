@@ -1,4 +1,5 @@
 run = "python main.py"
+hidden = ["*/primes"]
 [nix]
 channel = "unstable"
 [env]

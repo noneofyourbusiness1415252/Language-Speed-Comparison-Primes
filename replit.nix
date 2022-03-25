@@ -15,5 +15,6 @@
 		pkgs.ktlint
 		pkgs.nodePackages.prettier
 		pkgs.powershell
+		pkgs.php81
 	];
 }

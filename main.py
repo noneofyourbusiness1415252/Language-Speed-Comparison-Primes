@@ -4,7 +4,7 @@ reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
 	"\033[31m",
-	["C", "C++", "Rust", "Go", "C#", "Kotlin", "NodeJS", "Java", "Python", "Ruby"],
+	["C++", "C", "Rust", "Go", "C#", "Kotlin", "Java", "PHP", "NodeJS", "Python"],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -40,6 +40,8 @@ while True:
 				args = "'node', 'primes.js'"
 			case "Ruby":
 				args = "'ruby', 'primes.rb'"
+			case "PHP":
+				args = "'php', 'primes.php'"
 			case _:
 				args = f"'./{i}/primes'"
 		try:

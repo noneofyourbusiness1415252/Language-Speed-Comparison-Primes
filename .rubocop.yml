@@ -4,5 +4,6 @@ Layout/IndentationWidth:
  Width: 1
 AllCops:
  NewCops: enable
-Layout/LineLength:
- Max: 88
+ TargetRubyVersion: 3.0
+Layout/LineLength: 
+ Max: 83

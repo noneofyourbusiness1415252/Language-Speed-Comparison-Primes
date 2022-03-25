@@ -6,7 +6,7 @@ half = limit / 2
 sieve = "\x1" * half
 total = 1
 (3..Integer.sqrt(limit)).step(2).each do |i|
-	next unless sieve[i / 2] == "\x1"
+	next if sieve[i / 2] == "\x0"
 
 	(i**2 / 2...half).step(i).each do |j|
 		sieve[j] = "\x0"
@@ -18,4 +18,5 @@ end
 		total += 1
 	end
 end
-puts "\nTotal: #{total}"
+puts "
+Total: #{total}"

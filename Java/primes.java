@@ -2,8 +2,8 @@ interface primes {
 	static void main(String[] args) {
 		System.out.print(2);
 		int limit = Integer.parseUnsignedInt(args[0]),
-			half = Integer.divideUnsigned(limit, 2), isqrt = (int) Math.sqrt(limit),
-			total = 1;
+			half = Integer.divideUnsigned(limit, 2),
+			isqrt = (int) Math.sqrt(limit), total = 1;
 		boolean[] sieve = new boolean[half];
 		for (int i = 3; i <= isqrt; i += 2)
 			if (!sieve[i / 2])
