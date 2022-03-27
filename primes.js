@@ -1,7 +1,7 @@
 process.stdout.write("2")
 half = process.argv[2] / 2
 sieve = new Uint8Array(half)
-for (i = 3, isqrt = Math.sqrt(process.argv[2]); i < isqrt; i += 2)
+for (i = 3; i < (isqrt = Math.sqrt(process.argv[2])); i += 2)
 	if (!sieve[i / 2])
 		for (j = ~~(i ** 2 / 2); j < half; j += i) sieve[j] = true
 total = 1

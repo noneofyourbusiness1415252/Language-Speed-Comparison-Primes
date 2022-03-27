@@ -1,9 +1,9 @@
 Layout/IndentationStyle:
  EnforcedStyle: tabs
+ IndentationWidth: 4
 Layout/IndentationWidth:
  Width: 1
 AllCops:
  NewCops: enable
- TargetRubyVersion: 3.0
 Layout/LineLength: 
- Max: 83
+ Max: 80

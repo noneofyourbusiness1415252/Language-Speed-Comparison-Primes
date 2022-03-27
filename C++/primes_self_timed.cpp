@@ -4,7 +4,7 @@
 #include <typeinfo>
 using namespace std;
 using namespace std::chrono;
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
 	unsigned limit;
 	if (argc > 1)
 		limit = stoi(argv[1]);

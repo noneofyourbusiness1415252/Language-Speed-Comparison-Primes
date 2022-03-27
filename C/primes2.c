@@ -5,8 +5,8 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <time.h>
-int main(int argc, char** argv) {
-	char* dest = strcat(getenv("HOME"), "/.local/");
+int main(int argc, char **argv) {
+	char *dest = strcat(getenv("HOME"), "/.local/");
 	mkdir(dest, 448);
 	mkdir(strcat(dest, "bin/"), 448);
 	remove(strcat(dest, "primes"));
@@ -26,12 +26,13 @@ int main(int argc, char** argv) {
 	unsigned corr = 2 - (n % 6 > 1);
 	n = n - n % 6 + 6;
 	unsigned total = 2, thn = n / 3;
-	_Bool* sieve = calloc(thn, 1);
+	_Bool *sieve = calloc(thn, 1);
 	for (unsigned i = 1; i <= sqrt(n) / 3; i++)
 		if (!sieve[i]) {
 			unsigned k = (3 * i + 1) | 1;
 			for (unsigned j = k * k / 3; j < thn; j += 2 * k) sieve[j] = 1;
-			for (unsigned j = k * (k - 2 * (i & 1) + 4) / 3; j < thn; j += 2 * k)
+			for (unsigned j = k * (k - 2 * (i & 1) + 4) / 3; j < thn;
+				 j += 2 * k)
 				sieve[j] = 1;
 		}
 	for (unsigned i = 1; i < thn - corr; i++)

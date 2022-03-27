@@ -4,7 +4,7 @@ reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
 	"\033[31m",
-	["C++", "C", "Rust", "Go", "C#", "Kotlin", "Java", "PHP", "NodeJS", "Python"],
+	["C", "C++", "Rust", "Go", "Java", "C♯", "Kotlin", "PHP", "NodeJS", "Dart", "Python"],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -33,20 +33,20 @@ while True:
 	for i in langs:
 		match i:
 			case "Python":
-				args = "'python', 'primes.py'"
+				args = "python primes.py"
 			case "Java":
-				args = f"'java', '-cp', 'Java', 'primes'"
+				args = f"java -cp Java primes"
 			case "NodeJS":
-				args = "'node', 'primes.js'"
+				args = "node primes.js"
 			case "Ruby":
-				args = "'ruby', 'primes.rb'"
+				args = "ruby primes.rb"
 			case "PHP":
-				args = "'php', 'primes.php'"
+				args = f"php primes.php"
 			case _:
-				args = f"'./{i}/primes'"
+				args = f"./{i}/primes"
 		try:
 			times[i] = timeit(
-				f"run([{args}, '{limit}'], stdout=DEVNULL, stderr=DEVNULL, check=True)",
+				f"run({args.split() + [str(limit)]}, stdout=DEVNULL, stderr=DEVNULL, check=True)",
 				"from subprocess import run, DEVNULL",
 				number=1,
 			)
