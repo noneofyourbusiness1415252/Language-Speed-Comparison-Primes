@@ -17,5 +17,6 @@
 		pkgs.powershell
 		pkgs.php81
 		pkgs.dart
+		pkgs.swift
 	];
 }
