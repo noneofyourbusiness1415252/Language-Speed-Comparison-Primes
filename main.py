@@ -4,7 +4,7 @@ reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
 	"\033[31m",
-	["C", "C++", "Rust", "Go", "C#", "Java", "Kotlin", "Swift", "PHP", "NodeJS", "Dart", "Python"],
+	["C", "C++", "Rust", "Go", "C♯", "Java", "Kotlin", "Swift", "PHP", "NodeJS", "Dart", "Python", "R"],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -15,8 +15,8 @@ while True:
 	else:
 		break
 print(
-	f"{reset}Enter a pattern to increase the numbers tested each time, e.g. +5 (add 5"
-	" each time), *4 (multiply by 4 each time), **2 (square each time)",
+	f"{reset}Enter a pattern to increase the numbers tested each time, e.g. +5 "
+	"(add 5 each time), *4 (multiply by 4 each time), **2 (square each time)",
 	diamond,
 )
 while True:
@@ -42,6 +42,8 @@ while True:
 				args = "ruby primes.rb"
 			case "PHP":
 				args = f"php primes.php"
+			case "R":
+				args = "Rscript primes.r"
 			case _:
 				args = f"./{i}/primes"
 		try:
@@ -54,10 +56,10 @@ while True:
 			print(f"{i}: {red}{e}{reset}")
 			continue
 		print(f"{i}: {diamond}{round(times[i], 3)}{reset}")
-	lnames = times.keys()
-	fastest = min(lnames, key=times.get)
+	langnames = times.keys()
+	fastest = min(langnames, key=times.get)
 	print(f"Multipliers, relative to {diamond}{fastest}{reset}:")
-	for i in sorted(lnames, key=times.get):
+	for i in sorted(langnames, key=times.get):
 		print(
 			f"{diamond}{i}{reset}:"
 			f" {diamond}{round(times[i] / times[fastest], 2)}{reset}"

@@ -5,6 +5,7 @@
 		pkgs.rustfmt
 		pkgs.dotnet-sdk # C#
 		pkgs.nodejs-slim-17_x
+		pkgs.nodePackages.typescript
 		pkgs.ruby_3_1
 		pkgs.rubyPackages_3_1.rubocop.out
 		pkgs.go_1_18
@@ -18,5 +19,7 @@
 		pkgs.php81
 		pkgs.dart
 		pkgs.swift
+		pkgs.R
+		pkgs.shfmt
 	];
 }
