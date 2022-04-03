@@ -29,7 +29,7 @@ Dart)
 	dart compile exe primes.dart
 	;;
 Swift)
-	swiftc -Ounchecked -Xlinker -lm primes.dart
+	swiftc -Ounchecked -Xlinker -lm primes.swift
 	;;
 esac
 if [ $1 != "Java" ]; then
