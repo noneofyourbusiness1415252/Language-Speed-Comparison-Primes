@@ -10,10 +10,9 @@ print("Enter a number for the first test", diamond)
 while True:
 	try:
 		limit = int(eval(input()))
+		break
 	except:
 		print("\033[31mError: Please enter an integer", diamond)
-	else:
-		break
 print(
 	f"{reset}Enter a pattern to increase the numbers tested each time, e.g. +5 "
 	"(add 5 each time), *4 (multiply by 4 each time), **2 (square each time)",
@@ -23,10 +22,9 @@ while True:
 	try:
 		pattern = input()
 		eval(f"{limit} {pattern}")
+		break
 	except:
 		print(f"{red}Error: Please enter a valid pattern: ", end=diamond)
-	else:
-		break
 while True:
 	print(f"{reset}Times with {diamond}{limit}{reset} numbers:")
 	times = {}

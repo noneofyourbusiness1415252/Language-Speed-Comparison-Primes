@@ -4,9 +4,9 @@ Java)
 	javac primes.java
 	java primes $2 100
 	;;
-C♯)
-	dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true
-	mv -v bin/Release/net5.0/linux-x64/publish/primes .
+C♯ | VB)
+	dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true --self-contained
+	mv -v bin/Release/net6.0/linux-x64/publish/primes .
 	rm -r bin obj
 	;;
 C++)
