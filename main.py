@@ -4,7 +4,7 @@ reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
 	"\033[31m",
-	["C", "C++", "Rust", "Go", "C♯", "Java", "Kotlin", "Swift", "PHP", "NodeJS", "Dart", "Python", "R"],
+	["C", "C++", "Rust", "Go", "C♯", "Java", "Kotlin", "VB", "Swift", "PHP", "NodeJS", "Dart", "Python", "R"],
 )
 print("Enter a number for the first test", diamond)
 while True:
