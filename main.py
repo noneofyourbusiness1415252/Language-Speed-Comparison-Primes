@@ -4,7 +4,22 @@ reset, diamond, red, langs = (
 	"\033[0m",
 	"\033[1;38;2;185;242;255m",
 	"\033[31m",
-	["C", "C++", "Rust", "Go", "C♯", "Java", "Kotlin", "VB", "Swift", "PHP", "NodeJS", "Dart", "Python", "R"],
+	[
+		"C",
+		"C++",
+		"Rust",
+		"Go",
+		"C♯",
+		"Java",
+		"Kotlin",
+		"VB",
+		"Swift",
+		"PHP",
+		"NodeJS",
+		"Dart",
+		"Python",
+		"R",
+	],
 )
 print("Enter a number for the first test", diamond)
 while True:
@@ -46,7 +61,8 @@ while True:
 				args = f"./{i}/primes"
 		try:
 			times[i] = timeit(
-				f"run({args.split() + [str(limit)]}, stdout=DEVNULL, stderr=DEVNULL, check=True)",
+				f"run({args.split() + [str(limit)]}, stdout=DEVNULL,"
+				" stderr=DEVNULL, check=True)",
 				"from subprocess import run, DEVNULL",
 				number=1,
 			)
