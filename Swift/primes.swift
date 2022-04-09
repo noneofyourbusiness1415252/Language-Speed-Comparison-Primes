@@ -8,7 +8,7 @@ for i in stride(from: 3, through: Int(Float(limit).squareRoot()), by: 2) {
 		}
 	}
 }
-for i in 1..<half {
+for i in stride(from: 1, to: half, by: 1) {
 	if sieve[i] {
 		print(",", 2 * i + 1, terminator: "")
 		total += 1
