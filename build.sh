@@ -40,7 +40,6 @@ done
 for ((x = 0; ; x++)); do
 	printf "\x1b[38;5;$((x % 216 + 16))mFinished! Press enter to dismiss\a\r"
 	if read -t 0.5; then
-		echo
 		exit
 	fi
 done
