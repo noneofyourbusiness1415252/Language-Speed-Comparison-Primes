@@ -27,7 +27,7 @@ for i in $@; do
 		rustc -C opt-level=3 primes.rs
 		;;
 	Dart)
-		dart compile exe primes.dart
+		dart compile exe primes.dart -o primes
 		;;
 	Swift)
 		swiftc -Ounchecked -Xlinker -lm primes.swift
