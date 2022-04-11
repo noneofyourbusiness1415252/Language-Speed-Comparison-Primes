@@ -11,7 +11,7 @@ where
 		match tmp.trim().parse::<T>() {
 			Ok(res) => break res,
 			Err(err) => {
-				eprintln!("\x1b[91m{}\nTry again!\x1b[96m", err)
+				println!("\x1b[91m{}. Try again!\x1b[96m", err)
 			}
 		}
 		tmp.clear();
@@ -62,7 +62,7 @@ fn main() {
 				times.insert(*i, start.elapsed().as_secs_f32());
 				println!("\x1b[96m{0:.3}\x1b[0m", times.get(i).unwrap())
 			} else {
-				eprintln!("\x1b[91m{}\x1b[0m", status);
+				println!("\x1b[91m{}\x1b[0m", status);
 			}
 		}
 		limit *= pattern;
