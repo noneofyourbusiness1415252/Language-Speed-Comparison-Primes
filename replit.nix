@@ -3,7 +3,7 @@
 		pkgs.python311
 		pkgs.rustc
 		pkgs.rustfmt
-		pkgs.dotnet-sdk # C#
+		pkgs.dotnet-sdk # C#, VB
 		pkgs.nodejs-slim-17_x
 		pkgs.nodePackages.typescript
 		pkgs.ruby_3_1
