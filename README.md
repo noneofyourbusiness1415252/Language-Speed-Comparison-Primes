@@ -1,5 +1,8 @@
-This test compares the speed of Rust, C, Node.JS, C#, Python, Java, Go, Kotlin
-and Ruby using an algorithm similar to
+This test compares the speed of Python, Java, Node.js, C♯, C++, PHP, C, Go,
+Kotlin, Rust, Ruby, Dart, Swift, R and Visual Basic (the 15
+[most common languages](https://insights.stackoverflow.com/survey/2021#technology-most-popular-technologies)
+that can output primes to a console) by comparing the speed of implementations
+of an algorithm similar to
 [rwh_primes](https://stackoverflow.com/questions/2068372/fastest-way-to-list-all-primes-below-n/3035188#3035188).
 The output of the programs is not shown; you only see the time taken by each
 program. Use my
