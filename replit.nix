@@ -4,22 +4,17 @@
 		pkgs.rustc
 		pkgs.rustfmt
 		pkgs.dotnet-sdk # C#, VB
-		pkgs.nodejs-slim-17_x
-		pkgs.nodePackages.typescript
+		pkgs.nodejs-slim-17_x # 18x is missing!
 		pkgs.ruby_3_1
-		pkgs.rubyPackages_3_1.rubocop.out
 		pkgs.go_1_18
-		pkgs.clang_13 # C, C++ [clang_14](https://search.nixos.org/packages?channel=unstable&show=clang_14&query=clang_14) missing in replit!
+		pkgs.clang_13 # 14 is missing!
 		pkgs.clang-tools
 		pkgs.kotlin-native
 		pkgs.jdk # Java
-		pkgs.ktlint
 		pkgs.nodePackages.prettier
-		pkgs.powershell
 		pkgs.php81
 		pkgs.dart
 		pkgs.swift
 		pkgs.R
-		pkgs.shfmt
 	];
 }

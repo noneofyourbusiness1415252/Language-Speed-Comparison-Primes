@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sys import argv
 print(end="2")
 limit = int(argv[1])

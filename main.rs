@@ -1,11 +1,11 @@
-use std::{*, process::*};
+use std::{process::*, *};
 fn input<T: str::FromStr>(prompt: &str) -> T
 where
 	T::Err: fmt::Display,
 {
 	println!("{}\x1b[96m", prompt);
-	let mut tmp = String::new();
 	loop {
+		let mut tmp = String::new();
 		io::stdin().read_line(&mut tmp).unwrap();
 		print!("\x1b[0m");
 		match tmp.trim().parse::<T>() {
@@ -14,7 +14,6 @@ where
 				println!("\x1b[91m{}. Try again!\x1b[96m", err)
 			}
 		}
-		tmp.clear();
 	}
 }
 fn main() {
@@ -32,32 +31,27 @@ fn main() {
 		for i in &langs {
 			let args;
 			let mut command = Command::new(match *i {
-				"Python" | "Java" | "Ruby" | "PHP" => {
-					args = i.to_lowercase();
-					&args
-				}
-				"Node.js" => "node",
-				"R" => "Rscript",
+				"Python" => "./primes.py",
+				"Node.js" => "./primes.js",
+				"Ruby" => "./primes.rb",
+				"PHP" => "./primes.php",
+				"R" => "./primes.r",
+				"Java" => "java",
 				_ => {
 					args = format!("{}/primes", i);
 					&args
 				}
 			});
-			match *i {
-				"Java" => command.args(["-cp", "Java", "primes"]),
-				"Python" => command.arg("primes.py"),
-				"Node.js" => command.arg("primes.js"),
-				"PHP" => command.arg("primes.php"),
-				"Ruby" => command.arg("primes.rb"),
-				"R" => command.arg("primes.r"),
-				_ => &command,
-			};
-			print!("\x1b[96m{}\x1b[0m: ", i);
+			if *i == "Java" {
+				command.args(["-cp", "Java", "primes"]);
+			}
+			print!("{}: ", i);
 			command
 				.arg(format!("{}", limit))
 				.stdout(Stdio::null())
 				.stderr(Stdio::null());
-			let (start, status) = (time::Instant::now(), command.status().unwrap());
+			let (start, status) =
+				(time::Instant::now(), command.status().unwrap());
 			if status.success() {
 				times.insert(*i, start.elapsed().as_secs_f32());
 				println!("\x1b[96m{0:.3}\x1b[0m", times.get(i).unwrap())
@@ -66,11 +60,10 @@ fn main() {
 			}
 		}
 		limit *= pattern;
-		langs.sort_by(|a, b| times.get(a).partial_cmp(&times.get(b)).unwrap());
-		println!(
-			"Multipliers, relative to \x1b[38;2;0;255;0m{}\x1b[0m:",
-			langs[0]
-		);
+		langs.sort_unstable_by(|a, b| {
+			times.get(a).partial_cmp(&times.get(b)).unwrap()
+		});
+		println!("\x1b[38;2;0;255;0m{}\x1b[0m wins. Multipliers:", langs[0]);
 		let fastest = times.get(langs[0]).unwrap();
 		for i in &langs[1..] {
 			let multiplier = times.get(i).unwrap() / fastest;

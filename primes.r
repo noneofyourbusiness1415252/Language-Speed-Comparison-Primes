@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 library(compiler)
 invisible(enableJIT(3))
 cat(2)

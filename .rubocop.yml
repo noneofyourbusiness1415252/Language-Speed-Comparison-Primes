@@ -1,9 +1,0 @@
-Layout/IndentationStyle:
- EnforcedStyle: tabs
- IndentationWidth: 4
-Layout/IndentationWidth:
- Width: 1
-AllCops:
- NewCops: enable
-Layout/LineLength: 
- Max: 80
