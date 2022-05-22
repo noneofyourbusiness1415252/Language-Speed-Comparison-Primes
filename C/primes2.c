@@ -17,7 +17,8 @@ int main(int argc, char **argv) {
 		n = atoi(argv[1]);
 	else {
 		puts("\x1b[0mEnter a number to find the primes up to it");
-		while (!scanf("%u", &n)) getchar();
+		while (!scanf("%u", &n))
+			getchar();
 	}
 	struct timespec ts;
 	timespec_get(&ts, TIME_UTC);
@@ -30,9 +31,9 @@ int main(int argc, char **argv) {
 	for (unsigned i = 1; i <= sqrt(n) / 3; i++)
 		if (!sieve[i]) {
 			unsigned k = (3 * i + 1) | 1;
-			for (unsigned j = k * k / 3; j < thn; j += 2 * k) sieve[j] = 1;
-			for (unsigned j = k * (k - 2 * (i & 1) + 4) / 3; j < thn;
-				 j += 2 * k)
+			for (unsigned j = k * k / 3; j < thn; j += 2 * k)
+				sieve[j] = 1;
+			for (unsigned j = k * (k - 2 * (i & 1) + 4) / 3; j < thn; j += 2 * k)
 				sieve[j] = 1;
 		}
 	for (unsigned i = 1; i < thn - corr; i++)

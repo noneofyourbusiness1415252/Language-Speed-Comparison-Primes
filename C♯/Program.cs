@@ -6,7 +6,8 @@ class primes {
 		var sieve = new bool[half];
 		for (uint i = 3, isqrt = (uint)Math.Sqrt(limit); i <= isqrt; i += 2)
 			if (!sieve[i / 2])
-				for (uint j = i * i / 2; j < half; j += i) sieve[j] = true;
+				for (uint j = i * i / 2; j < half; j += i)
+					sieve[j] = true;
 		for (uint i = 1; i < half; i++)
 			if (!sieve[i]) {
 				Console.Write(", " + (2 * i + 1));

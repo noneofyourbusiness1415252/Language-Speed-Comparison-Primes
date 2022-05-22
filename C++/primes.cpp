@@ -7,7 +7,8 @@ int main(int, char **argv) {
 	auto sieve = new bool[half]();
 	for (unsigned i = 3, isqrt = sqrt(limit); i <= isqrt; i += 2)
 		if (!sieve[i / 2])
-			for (auto j = i * i / 2; j < half; j += i) sieve[j] = true;
+			for (auto j = i * i / 2; j < half; j += i)
+				sieve[j] = true;
 	for (auto i = 1u; i < half; i++)
 		if (!sieve[i]) {
 			printf(", %u", 2 * i + 1);

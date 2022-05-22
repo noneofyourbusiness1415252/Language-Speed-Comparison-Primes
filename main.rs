@@ -22,9 +22,8 @@ fn main() {
 		"Node.js", "Dart", "Python", "R",
 	];
 	let mut limit: u32 = input("Enter a number for the first test");
-	let pattern: u32 = input(
-		"Enter a number to multiply the amount of numbers tested on each time",
-	);
+	let pattern: u32 =
+		input("Enter a number to multiply the amount of numbers tested on each time");
 	loop {
 		println!("Times with \x1b[96m{}\x1b[0m numbers:", limit);
 		let mut times = collections::HashMap::new();
@@ -50,8 +49,7 @@ fn main() {
 				.arg(format!("{}", limit))
 				.stdout(Stdio::null())
 				.stderr(Stdio::null());
-			let (start, status) =
-				(time::Instant::now(), command.status().unwrap());
+			let (start, status) = (time::Instant::now(), command.status().unwrap());
 			if status.success() {
 				times.insert(*i, start.elapsed().as_secs_f32());
 				println!("\x1b[96m{0:.3}\x1b[0m", times.get(i).unwrap())
@@ -60,9 +58,7 @@ fn main() {
 			}
 		}
 		limit *= pattern;
-		langs.sort_unstable_by(|a, b| {
-			times.get(a).partial_cmp(&times.get(b)).unwrap()
-		});
+		langs.sort_unstable_by(|a, b| times.get(a).partial_cmp(&times.get(b)).unwrap());
 		println!("\x1b[38;2;0;255;0m{}\x1b[0m wins. Multipliers:", langs[0]);
 		let fastest = times.get(langs[0]).unwrap();
 		for i in &langs[1..] {

@@ -18,7 +18,8 @@ int main(int argc, char **argv) {
 	auto sieve = new bool[half]();
 	for (auto i = 3u; i <= isqrt; i += 2) {
 		if (!sieve[i / 2])
-			for (auto j = i * i / 2; j < half; j += i) sieve[j] = 1;
+			for (auto j = i * i / 2; j < half; j += i)
+				sieve[j] = 1;
 	}
 	for (auto i = 1u; i < half; i++)
 		if (!sieve[i]) {
